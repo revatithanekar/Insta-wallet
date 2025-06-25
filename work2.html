@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+         
+
+        h4{
+            text-align:right;
+            margin-top:70px ;
+            margin-bottom: 0px;
+        
+        }
+        form{
+            align-items: center;
+        }
+         
+          .centered{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        span{
+            color: red;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="centered">
+    <h1> OTP Verification </h1>
+    <h4 >Enter OTP</h4> 
+    <label for="Enter OTP" ></label><br
+    <div style="text-align: center;">
+    <form action="submit" method="post">
+            <input type="text" id="box1" oninput="moveToNext(this, 'box2')"   maxlength="1" name="OTP" text-align="center" required style="padding: 10px; width: 20px; font-size: 1em;">
+
+           <input type="text"  id="box2"  oninput="moveToNext(this, 'box3')" maxlength="1" name="otp2" text-align="center" required style="padding: 10px; width: 20px; font-size: 1em;">
+            
+             <input type="text"  id="box3" oninput="moveToNext(this, 'box4')"  maxlength="1" name="otp3" text-align="center" required style="padding: 10px; width: 20px; font-size: 1em;">
+    
+            <input type="text"  id="box4"  maxlength="1" name="otp4" text-align="center" required style="padding: 10px; width: 20px; font-size: 1em;">
+
+  <pre>
+  Resend OTP     <span id="timer">2:00</span>
+</pre>
+<button type="submit"  style="padding: 10px 90px;background-color: blue;color: aliceblue; font-size: 1em;">
+                submit
+    </button>
+        </form>
+    </div>
+</div>
+<script>
+  function moveToNext(current, nextFieldID) {
+    if (current.value.length >= current.maxLength) {
+      document.getElementById(nextFieldID).focus();
+    }
+  } 
+  let time = 120; // 2 minutes in seconds
+
+  let countdown = setInterval(function() {
+    let minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+
+    // Format time as MM:SS
+    if (seconds < 10) {
+      seconds = "0" + seconds;
+    }
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+
+    document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+    time--;
+
+    if (time < 0) {
+      clearInterval(countdown);
+      document.getElementById("timer").innerHTML = "Time's up!";
+    }
+  }, 1000);
+</script>
+  
+</body>
+</html>

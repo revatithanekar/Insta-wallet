@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard">
+
+  <div class="sidebar">
+    <div class="logo">
+      <img src="zeal logo.jpeg" alt="User" style="width: 50px; height: 50px; border-radius: 50%;">
+      <h2> Hostel Leave Management</h2>
+    </div>
+
+    <ul>
+      <fieldset class="set1" onclick="window.location.href='Dashbord2.html';">
+        <div class="phone">
+          <img src="thenewdashboard.jpg" alt="User" style="width: 50px; height: 50px; border-radius: 50%;">
+          <li class="">Dashboard</li>
+        </div>
+      </fieldset>
+      <div class="phone">
+        <img src="pencile.jpg" alt="User" style="width: 30px; height: 30px; border-radius: 30%;">
+        <li>Review Requests</li>
+      </div>
+      <div class="phone">
+        <img src="thenew pie.png" alt="User" style="width: 30px; height: 30px; border-radius: 30%;">
+        <li>Analytics</li>
+      </div>
+      <div class="phone">
+        <img src="bellicon.jpg" alt="User" style="width: 50px; height: 50px; border-radius: 50%;">
+        <li>Notifications</li>
+      </div>
+      <div class="phone">
+        <img src="pro.jpg" alt="User" style="width: 30px; height: 30px; border-radius: 30%;">
+        <li>Profile</li>
+      </div>
+      <div class="phone">
+        <img src="system.png" alt="User" style="width: 30px; height: 30px; border-radius: 30%;">
+        <li>Settings</li>
+      </div>
+    </ul>
+    <button class="logout-btn">Log out</button>
+  </div>
+
+  <div class="New">
+    <div class="top-bar">
+      <input type="text" placeholder="Search..." class="search">
+      <img src="imagesbell.png" alt="User" style="width: 50px; height: 50px; border-radius: 50%;">
+      <img src="profile image.jpeg" alt="User" style="width: 50px; height: 50px; border-radius: 50%;">
+
+    </div>
+    <div class="header">
+      <h1>Admin Dashboard</h1>
+      <p>Your student’s leave summary at a glance...</p>
+    </div>
+
+    <div class="stats">
+      <div class="box total">
+        <h3>Total Leaves (month)</h3>
+
+        <p>120</p>
+      </div>
+      <div class="box approved">
+        <h3>Leaves Approved</h3>
+        <p>95</p>
+      </div>
+      <div class="box pending">
+        <h3>Pending Leaves</h3>
+        <p>15</p>
+      </div>
+      <div class="box rejected">
+        <h3>Rejected Leaves</h3>
+        <p>10</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <span class="activity-header">
+        <h3>Recent Activity</h3>
+        <div class="actions">
+          <button class="approve-all" ; img src="tick.jpg" alt="User">Approve All</button>
+          <button class="reject-all">Reject All</button>
+        </div>
+      </span>
+      <div class="entry">
+        <img src="profile image.jpeg" alt="User">
+        <div class="info">
+          <strong>Ethan Carter</strong>
+          <p>Vacation Request</p>
+        </div>
+        <span class="badge pending">Pending</span>
+        <span class="time">2h ago</span>
+      </div>
+
+      <div class="entry">
+        <img src="profile image.jpeg" alt="User">
+        <div class="info">
+          <strong>Ethan Carter</strong>
+          <p>Vacation Request</p>
+        </div>
+        <span class="badge approved">Approved</span>
+        <span class="time">4d ago</span>
+      </div>
+
+      <div class="entry">
+        <img src="profile image.jpeg" alt="User">
+        <div class="info">
+          <strong>Ethan Carter</strong>
+          <p>Vacation Request</p>
+        </div>
+        <span class="badge rejected">Rejected</span>
+        <span class="time">7d ago</span>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
